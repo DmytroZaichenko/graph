@@ -1,16 +1,11 @@
 package howToDraw;
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.Graphics;
-import java.awt.Image;
+import java.awt.*;
 import java.awt.image.ImageObserver;
 import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
 
 public class DrawingBoard extends JPanel {
 
@@ -57,7 +52,21 @@ public class DrawingBoard extends JPanel {
         JFrame frame = new JFrame("I can drew text!!!");
         frame.setMinimumSize(new Dimension(800, 600));
         frame.setLocation(300,100);
+
+        Container jp = new JPanel(){
+            @Override
+            public void paint(Graphics g) {
+                super.paint(g);
+
+
+            }
+        };
         frame.getContentPane().add(new DrawingBoard());
+        frame.getContentPane().add(jp);
+        JLabel jLabel = new JLabel("new label");
+        jp.add(jLabel);
+
+
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
