@@ -62,9 +62,9 @@ public class DrawingBoard extends JPanel {
             }
         };
         frame.getContentPane().add(new DrawingBoard());
-        frame.getContentPane().add(jp);
-        JLabel jLabel = new JLabel("new label");
-        jp.add(jLabel);
+//        frame.getContentPane().add(jp);
+//        JLabel jLabel = new JLabel("new label");
+//        jp.add(jLabel);
 
 
 
